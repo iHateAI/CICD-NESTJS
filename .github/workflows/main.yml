@@ -47,7 +47,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: [ self-hosted, label-go ]
+    runs-on: [ self-hosted, label-cicd ]
     steps:
       - name: Docker login
         uses: docker/login-actions@v2
