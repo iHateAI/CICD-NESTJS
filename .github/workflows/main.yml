@@ -1,7 +1,8 @@
 name: CICD-NESTJS
 
 env:
-  DOCKER_IMAGE: ghcr.io/${{ github.actor }}/cicd-nest
+  #DOCKER_IMAGE: ghcr.io/${{ github.actor }}/cicd-nest
+  DOCKER_IMAGE: ghcr.io/ihateai/cicd-nest
   VERSION: ${{ github.sha }}
   NAME: cicd
 
