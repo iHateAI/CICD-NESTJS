@@ -52,7 +52,7 @@ jobs:
     runs-on: [ self-hosted, label-cicd ]
     steps:
       - name: Docker login
-        uses: docker/login-actions@v2
+        uses: docker/login-action@v2
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
