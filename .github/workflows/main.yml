@@ -42,8 +42,9 @@ jobs:
     - name: Build and push
       id: docker_build
       uses: docker/build-push-action@v3
-      push: true
-      tags: ${{ env.DOCKER_IMAGE }}:latest
+      with:
+        push: true
+        tags: ${{ env.DOCKER_IMAGE }}:latest
 
   deploy:
     needs: build
