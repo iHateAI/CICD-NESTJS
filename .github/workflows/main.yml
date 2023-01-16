@@ -1,0 +1,19 @@
+name: CICD-NESTJS
+
+on:
+  push:
+    branches: ["main"]
+    
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: checkout source code
+      uses: actions/checkout@v3
+    - name: Setup node.js 16.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.19.0
+        cache: 'npm'
+    - run: npm install
+    - run: npm run test:e2e
